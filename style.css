@@ -671,7 +671,7 @@ nav ul li a:hover::after {
     width: 100%;
     height: auto; /* La hauteur s'adapte à la largeur */
     max-height: 500px; /* Limite la hauteur pour éviter les images trop grandes */
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     margin: 0; /* Annule les marges négatives */
     border-bottom: none; /* Pas de bordure sous l'image du carrousel */
