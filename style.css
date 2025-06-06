@@ -668,7 +668,7 @@ nav ul li a:hover::after {
 }
 
 .social-post.instagram .carousel-slide .post-image {
-    width: 100%;
+    width: 80%;
     height: auto; /* La hauteur s'adapte à la largeur */
     max-height: 500px; /* Limite la hauteur pour éviter les images trop grandes */
     object-fit: contain;
