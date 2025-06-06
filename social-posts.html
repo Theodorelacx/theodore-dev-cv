@@ -249,9 +249,10 @@
                 const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
 
                 let currentSlideIndex = 0;
-                let slideWidth = slides[0].getBoundingClientRect().width;
 
                 const updateCarouselPosition = () => {
+                    // Recalcule la largeur de la diapositive ici pour s'assurer qu'elle est toujours à jour
+                    const slideWidth = slides[0].getBoundingClientRect().width;
                     carouselTrack.style.transform = `translateX(-${currentSlideIndex * slideWidth}px)`;
                     updateDots();
                 };
@@ -284,10 +285,11 @@
                 });
 
                 window.addEventListener('resize', () => {
-                    slideWidth = slides[0].getBoundingClientRect().width;
+                    // slideWidth est maintenant recalculé à l'intérieur de updateCarouselPosition
                     updateCarouselPosition();
                 });
 
+                // Appel initial pour définir la position correcte et les points
                 updateCarouselPosition();
             }
 
