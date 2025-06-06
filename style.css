@@ -648,7 +648,7 @@ nav ul li a:hover::after {
 }
 
 .social-post.instagram .carousel-container {
-    width: 100%;
+    width: 80%;
     overflow: hidden; /* Masque les images qui ne sont pas visibles */
     position: relative;
     border-bottom: 1px solid var(--border-color); /* Séparateur visuel */
