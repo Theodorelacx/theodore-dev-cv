@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lg-thumbnail.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Ma Candidature Sociale</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="portfolio" class="page-section">
+            <div class="container">
+                <h2>Mon Portfolio</h2>
+                <p class="text-center">Découvrez quelques-uns de mes projets et réalisations qui illustrent mes compétences en communication et marketing. Utilisez les filtres pour naviguer par catégorie.</p>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Tout</button>
+                    <button class="filter-btn" data-filter="affiches">Affiches</button>
+                    <button class="filter-btn" data-filter="story">Stories</button>
+                    <button class="filter-btn" data-filter="communique-presse">Communiqués de presse</button>
+                    <button class="filter-btn" data-filter="fiche-produit">Fiches produit</button>
+                </div>
+
+                <div class="portfolio-grid">
+
+                    <div class="portfolio-item affiches">
+                        <h3>Projet Affiches - Campagne promotion</h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="affiches_projet1_01.jpg" alt="Affiche Projet 1 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="affiches_projet1_02.jpg" alt="Affiche Projet 1 - Visuel 2">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="affiches_projet1_01.jpg" data-gallery-id="affiches-p1" class="btn-primary gallery-trigger" data-src="affiches_projet1_01.jpg" data-sub-html="<h4>Affiche 1 - Campagne estivale</h4><p>Description de l'affiche 1.</p>">
+                            Voir le projet complet
+                        </a>
+                        <a href="affiches_projet1_02.jpg" data-gallery-id="affiches-p1" class="hidden-gallery-item" data-src="affiches_projet1_02.jpg" data-sub-html="<h4>Affiche 2 - Campagne estivale</h4><p>Description de l'affiche 2.</p>"></a>
+                    </div>
+
+                    <div class="portfolio-item affiches">
+                        <h3>Projet Affiches - Événement/Conférences</h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="affiches_projet2_01.jpg" alt="Affiche Projet 2 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="affiches_projet2_02.jpg" alt="Affiche Projet 2 - Visuel 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="affiches_projet2_03.jpg" alt="Affiche Projet 2 - Visuel 3">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="affiches_projet2_01.jpg" data-gallery-id="affiches-p2" class="btn-primary gallery-trigger" data-src="affiches_projet2_01.jpg" data-sub-html="<h4>Affiche 1 - Événement sportif</h4>">
+                            Voir le projet complet
+                        </a>
+                        <a href="affiches_projet2_02.jpg" data-gallery-id="affiches-p2" class="hidden-gallery-item" data-src="affiches_projet2_02.jpg" data-sub-html="<h4>Affiche 2 - Événement sportif</h4>"></a>
+                        <a href="affiches_projet2_03.jpg" data-gallery-id="affiches-p2" class="hidden-gallery-item" data-src="affiches_projet2_03.jpg" data-sub-html="<h4>Affiche 3 - Événement sportif</h4>"></a>
+                    </div>
+
+                    <div class="portfolio-item affiches">
+                        <h3>Projet Affiches - Opération commerciale</h3>
+                        <img src="affiches_projet3_01.jpg" alt="Affiche Projet 3 - Visuel 1">
+                        <a href="affiches_projet3_01.jpg" data-gallery-id="affiches-p3" class="btn-primary gallery-trigger" data-src="affiches_projet3_01.jpg" data-sub-html="<h4>Affiche Sensibilisation</h4>">
+                            Voir le projet complet
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item story">
+                        <h3>Projet Stories -  Promotion de produit</h3>
+                        <img src="stories_projet1_01.jpg" alt="Story Projet 1 - Visuel 1">
+                        <a href="stories_projet1_01.jpg" data-gallery-id="stories-p1" class="btn-primary gallery-trigger" data-src="stories_projet1_01.jpg" data-sub-html="<h4>Story - Lancement produit</h4>">
+                            Voir la story
+                        </a>
+                    </div>
+
+                    <div class="portfolio-item story">
+                        <h3>Projet Stories - Calendrier éditorial</h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="stories_projet2_01.jpg" alt="Story Projet 2 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="stories_projet2_02.jpg" alt="Story Projet 2 - Visuel 2">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="stories_projet2_01.jpg" data-gallery-id="stories-p2" class="btn-primary gallery-trigger" data-src="stories_projet2_01.jpg" data-sub-html="<h4>Story 1 - Coulisses</h4>">
+                            Voir la story
+                        </a>
+                        <a href="stories_projet2_02.jpg" data-gallery-id="stories-p2" class="hidden-gallery-item" data-src="stories_projet2_02.jpg" data-sub-html="<h4>Story 2 - Coulisses</h4>"></a>
+                    </div>
+
+                    <div class="portfolio-item communique-presse">
+                        <h3>Projet Communiqué de presse - Annonce </h3>
+                        <img src="cp_projet1_01.jpg" alt="Communiqué de presse Projet 1 - Visuel 1">
+                        <a href="cp_projet1_01.jpg" data-gallery-id="cp-p1" class="btn-primary gallery-trigger" data-src="cp_projet1_01.jpg" data-sub-html="<h4>CP - Annonce partenariat</h4>">
+                            Lire le communiqué
+                        </a>
+                        </div>
+
+                    <div class="portfolio-item communique-presse">
+                        <h3>Projet Communiqué de presse - Journée de recrutement</h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="cp_projet2_01.jpg" alt="Communiqué de presse Projet 2 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="cp_projet2_02.jpg" alt="Communiqué de presse Projet 2 - Visuel 2">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="cp_projet2_01.jpg" data-gallery-id="cp-p2" class="btn-primary gallery-trigger" data-src="cp_projet2_01.jpg" data-sub-html="<h4>CP 1 - Bilan annuel</h4>">
+                            Lire le communiqué
+                        </a>
+                        <a href="cp_projet2_02.jpg" data-gallery-id="cp-p2" class="hidden-gallery-item" data-src="cp_projet2_02.jpg" data-sub-html="<h4>CP 2 - Bilan annuel</h4>"></a>
+                    </div>
+
+                    <div class="portfolio-item communique-presse">
+                        <h3>Projet Communiqué de presse - Actualités sectorielles</h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="cp_projet3_01.jpg" alt="Communiqué de presse Projet 3 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="cp_projet3_02.jpg" alt="Communiqué de presse Projet 3 - Visuel 2">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="cp_projet3_03.jpg" alt="Communiqué de presse Projet 3 - Visuel 3">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="cp_projet3_04.jpg" alt="Communiqué de presse Projet 3 - Visuel 4">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="cp_projet3_01.jpg" data-gallery-id="cp-p3" class="btn-primary gallery-trigger" data-src="cp_projet3_01.jpg" data-sub-html="<h4>CP 1 - Actualités</h4>">
+                            Lire le communiqué
+                        </a>
+                        <a href="cp_projet3_02.jpg" data-gallery-id="cp-p3" class="hidden-gallery-item" data-src="cp_projet3_02.jpg" data-sub-html="<h4>CP 2 - Actualités</h4>"></a>
+                        <a href="cp_projet3_03.jpg" data-gallery-id="cp-p3" class="hidden-gallery-item" data-src="cp_projet3_03.jpg" data-sub-html="<h4>CP 3 - Actualités</h4>"></a>
+                        <a href="cp_projet3_04.jpg" data-gallery-id="cp-p3" class="hidden-gallery-item" data-src="cp_projet3_04.jpg" data-sub-html="<h4>CP 4 - Actualités</h4>"></a>
+                    </div>
+
+                    <div class="portfolio-item fiche-produit">
+                        <h3>Projet Fiche Produit </h3>
+                        <div class="carousel-container">
+                            <div class="carousel-slides">
+                                <div class="carousel-slide">
+                                    <img src="fiches_produit_projet1_01.jpg" alt="Fiche Produit Projet 1 - Visuel 1">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="fiches_produit_projet1_02.jpg" alt="Fiche Produit Projet 1 - Visuel 2">
+                                </div>
+                            </div>
+                            <div class="carousel-nav">
+                                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <a href="fiches_produit_projet1_01.jpg" data-gallery-id="fp-p1" class="btn-primary gallery-trigger" data-src="fiches_produit_projet1_01.jpg" data-sub-html="<h4>Fiche Produit 1 - Article Z</h4>">
+                            Voir la fiche produit
+                        </a>
+                        <a href="fiches_produit_projet1_02.jpg" data-gallery-id="fp-p1" class="hidden-gallery-item" data-src="fiches_produit_projet1_02.jpg" data-sub-html="<h4>Fiche Produit 2 - Article Z</h4>"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

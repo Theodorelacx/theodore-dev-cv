@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - Ma Formation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Candidature Réseaux Sociaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="education" class="page-section">
+            <div class="container">
+                <h2>Ma Formation</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Master Marketing Vente</h3>
+                        <p class="school">IAE Clermont Auvergne</p>
+                        <p class="date">2021-2023</p>
+                        <p>Parcours Opérationnel et Digital, en alternance sur la deuxième année.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Licence 2 et 3 Gestion</h3>
+                        <p class="school">Université Clermont Auvergne</p>
+                        <p class="date">2019-2021</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>DUT Gestion des Entreprises et des Administrations</h3>
+                        <p class="school">IUT Clermont Auvergne</p>
+                        <p class="date">2017-2019</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

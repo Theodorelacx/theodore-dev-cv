@@ -1,0 +1,1304 @@
+/* Variables de couleurs */
+:root {
+    /* Basé sur le logo: */
+    --primary-logo-background: #FFD47F; /* Orange-jaune plus doux, inspiré du fond du logo */
+    --accent-color: #FF6B6B; /* Rouge-corail du "V" du logo, légèrement ajusté pour l'harmonie */
+    --dark-text-from-logo: #222222; /* Noir presque pur pour le texte, inspiré du "C" */
+
+    /* Couleurs complémentaires modernes: */
+    --primary-bg-color: #F8F8F8; /* Un gris très clair pour le fond principal (précédemment light-bg-color) */
+    --secondary-bg-color: #FFFFFF; /* Blanc pur pour les sections alternées et les cartes */
+
+    /* Autres couleurs du système: */
+    --text-color-dark: var(--dark-text-from-logo); /* Utilise le noir du logo pour le texte foncé */
+    --text-color-light: #f4f4f4; /* Texte clair pour les fonds sombres (footer) */
+    --border-color: #E0E0E0; /* Bordures subtiles */
+    --header-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Ombre légère pour la modernité */
+}
+
+/* Base */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; /* Police un peu plus moderne et lisible */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-dark);
+    background-color: var(--primary-bg-color); /* Utilise le gris très clair comme fond de page */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition pour les liens */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--dark-text-from-logo); /* Les liens survolent vers le noir du logo pour le contraste */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.page-section { /* Nouveau style pour les pages différentes */
+    padding: 60px 0;
+    background-color: var(--secondary-bg-color); /* Les pages sont en blanc par default */
+}
+
+.page-section.bg-light { /* Pour alterner les couleurs de section si tu le souhaites */
+    background-color: var(--primary-bg-color); /* Utilise le gris très clair */
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre pour les boutons */
+}
+
+.btn-primary:hover {
+    background-color: #E65A5A; /* Une couleur un peu plus foncée pour le survol */
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Ombre plus prononcée au survol */
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-bg-color); /* Fond de l'en-tête blanc pour un look plus épuré */
+    padding: 18px 0;
+    border-bottom: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--header-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-color-dark); /* Les liens de navigation sont en noir */
+    font-weight: 600;
+    font-size: 1.05em;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color); /* Soulignement en rouge-corail */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color); /* Les liens de navigation deviennent rouge-corail au survol */
+    text-decoration: none;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--text-color-dark);
+    cursor: pointer;
+}
+
+/* Hero Section (Accueil / À Propos de Moi) - Spécifique à index.html */
+.hero {
+    background-color: var(--primary-logo-background); /* Le fond de la section hero est l'orange-jaune doux du logo */
+    color: var(--text-color-dark);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 1.8em;
+    color: var(--text-color-dark);
+    margin-top: 0;
+    border-bottom: none;
+}
+
+.hero p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 20px auto 30px auto;
+}
+
+.contact-info-hero p {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1em;
+    color: var(--text-color-dark);
+}
+
+.contact-info-hero i {
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
+/* Timeline (Expérience et Formation) */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--border-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    width: 50%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border: 3px solid var(--secondary-bg-color); /* Le cercle a une bordure blanche/grise clair */
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    text-align: inherit;
+}
+
+.timeline-item .company, .timeline-item .school {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timeline-item .date {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    background-color: var(--secondary-bg-color); /* Fond blanc pour les catégories de compétences */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.skill-category i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.skill-category ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category ul li::before {
+    content: '\2022';
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Mes Petits Plus */
+.plus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.plus-item {
+    background-color: var(--secondary-bg-color); /* Fond blanc pour les "plus" */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.plus-item i {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.plus-item h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+.plus-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.plus-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Portfolio */
+.portfolio-filters {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.filter-btn {
+    background-color: var(--primary-bg-color); /* Fond gris clair pour les boutons de filtre */
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-color);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.filter-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    font-weight: bold;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    transition: all 0.5s ease-in-out;
+}
+
+.portfolio-item {
+    background-color: var(--secondary-bg-color); /* Fond blanc pour les éléments du portfolio */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+    display: block;
+    max-height: 1000px;
+}
+
+.portfolio-item.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border: none;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-item h3 {
+    margin: 20px 15px 10px 15px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.portfolio-item p {
+    padding: 0 15px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* NOUVEAU : Styles pour les boutons de navigation de section */
+.section-navigation {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px; /* Espace entre les boutons et le contenu */
+}
+
+.section-navigation .btn-primary {
+    margin: 0 15px; /* Espacement entre les boutons */
+    padding: 12px 25px; /* Boutons plus grands */
+    font-size: 1.05em;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Ombre plus marquée */
+}
+
+.section-navigation .btn-primary:hover {
+    transform: translateY(-3px); /* Effet de "pop" plus prononcé */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Section Candidature Réseaux Sociaux (Posts Facebook, Instagram, LinkedIn) */
+.social-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 2 colonnes sur desktop, 1 sur mobile */
+    gap: 30px;
+    margin-top: 40px; /* Ajusté par rapport aux boutons */
+}
+
+.social-post {
+    background-color: var(--secondary-bg-color); /* Fond blanc pour les posts */
+    border-radius: 12px; /* Bords plus arrondis pour un look moderne */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Ombre plus prononcée */
+    overflow: hidden; /* Assure que le contenu ne dépasse pas */
+    padding-bottom: 20px; /* Espace sous le contenu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de survol */
+}
+
+.social-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.social-post .post-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.social-post .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--primary-bg-color); /* Petite bordure sur la photo de profil */
+}
+
+.social-post .post-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-post .author-name {
+    font-weight: bold;
+    color: var(--text-color-dark);
+    font-size: 1.1em;
+}
+
+.social-post .post-date {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.social-post .post-content {
+    padding: 20px;
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+}
+
+.social-post .post-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    color: var(--text-color-dark); /* Les titres de posts restent sombres */
+    text-align: left; /* Aligne le titre à gauche pour les posts */
+}
+
+.social-post .post-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.social-post .post-image {
+    width: calc(100% + 40px); /* Prend toute la largeur, y compris le padding */
+    margin: 0 -20px 15px -20px; /* Supprime le padding horizontal pour l'image */
+    max-width: none; /* Annule max-width sur les images */
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.social-post .post-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 20px 5px 20px; /* Padding ajusté */
+    border-top: 1px solid var(--border-color);
+    color: #666;
+    font-size: 0.9em;
+}
+
+.social-post .post-actions span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.social-post .post-actions span:hover {
+    color: var(--accent-color);
+}
+
+.social-post .post-actions i {
+    margin-right: 8px;
+    font-size: 1.1em;
+    color: #666; /* Couleur par default des icônes d'action */
+    transition: color 0.2s ease;
+}
+
+.social-post .post-actions span:hover i {
+    color: var(--accent-color);
+}
+
+/* Styles spécifiques aux plateformes */
+
+/* Facebook */
+.social-post.facebook .post-header .facebook-icon {
+    color: #4267B2; /* Bleu Facebook */
+    font-size: 1.8em; /* Agrandir */
+    margin-left: auto; /* Pousse l'icône à droite */
+}
+
+/* Instagram */
+.social-post.instagram .post-header .instagram-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.2em; /* Agrandir */
+    margin-left: auto;
+}
+
+/* Styles pour le Carrousel Instagram */
+.social-post.instagram .post-content {
+    padding: 0; /* Supprime le padding pour que le carrousel prenne toute la largeur */
+    position: relative; /* Pour positionner les boutons et indicateurs */
+}
+
+.social-post.instagram .carousel-container {
+    width: 100%;
+    overflow: hidden; /* Masque les images qui ne sont pas visibles */
+    position: relative;
+    border-bottom: 1px solid var(--border-color); /* Séparateur visuel */
+}
+
+.social-post.instagram .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation de transition pour le défilement */
+}
+
+.social-post.instagram .carousel-slide {
+    min-width: 100%; /* Chaque slide prend 100% de la largeur du conteneur */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    display: flex; /* Pour centrer l'image si besoin */
+    justify-content: center;
+    align-items: center;
+}
+
+.social-post.instagram .carousel-slide .post-image {
+    width: 100%;
+    height: auto; /* La hauteur s'adapte à la largeur */
+    max-height: 500px; /* Limite la hauteur pour éviter les images trop grandes */
+    object-fit: cover;
+    display: block;
+    margin: 0; /* Annule les marges négatives */
+    border-bottom: none; /* Pas de bordure sous l'image du carrousel */
+}
+
+.social-post.instagram .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4); /* Fond semi-transparent */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%; /* Boutons ronds */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* S'assure que les boutons sont au-dessus des images */
+}
+
+.social-post.instagram .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.social-post.instagram .prev-btn {
+    left: 10px;
+}
+
+.social-post.instagram .next-btn {
+    right: 10px;
+}
+
+.social-post.instagram .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Espacement entre les points */
+    z-index: 10;
+}
+
+.social-post.instagram .carousel-indicators .dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.6); /* Points gris clair */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-post.instagram .carousel-indicators .dot.active {
+    background-color: var(--accent-color); /* Point actif en couleur d'accent */
+    transform: scale(1.2); /* Grossit légèrement le point actif */
+}
+
+.social-post.instagram .post-caption {
+    padding: 20px; /* Ajoute le padding pour le texte */
+    margin-top: 0; /* Réinitialise la marge */
+}
+.social-post .post-actions.instagram-actions {
+    justify-content: flex-start; /* Aligne les icônes à gauche */
+    gap: 20px; /* Espace entre les icônes */
+    padding-left: 20px;
+}
+.social-post .post-actions.instagram-actions i {
+    margin-right: 0; /* Pas de marge à droite pour les icônes individuelles */
+    font-size: 1.5em; /* Icônes plus grandes */
+}
+
+/* LinkedIn */
+.social-post.linkedin .post-header .linkedin-icon {
+    color: #0A66C2; /* Bleu LinkedIn */
+    font-size: 1.8em; /* Agrandir */
+    margin-left: auto;
+}
+.social-post.linkedin .linkedin-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0A66C2; /* Lien LinkedIn en bleu spécifique */
+}
+.social-post.linkedin .linkedin-link i {
+    color: #0A66C2;
+    margin-right: 5px;
+}
+
+/* Styles pour le "Voir plus" des posts (Facebook, Instagram, LinkedIn) */
+.social-post .post-text-container .full-text {
+    display: none; /* Par default, masqué */
+}
+
+.social-post .read-more-btn {
+    color: #888; /* Couleur du texte "voir plus" */
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-left: 5px; /* Petit espace avec le texte */
+    transition: color 0.2s ease;
+    display: inline-block; /* Permet le margin-left et une bonne interaction */
+    padding: 2px 0; /* Un peu de padding pour faciliter le clic */
+}
+
+.social-post .read-more-btn:hover {
+    color: var(--accent-color); /* Couleur d'accent au survol */
+    text-decoration: underline;
+}
+
+/* Ajouts pour les hashtags */
+.social-post .post-content .hashtags,
+.youtube-video-container .video-description-container .hashtags {
+    color: var(--accent-color); /* Utilise ta couleur d'accent pour les hashtags */
+    font-weight: bold;
+    font-size: 0.9em; /* Légèrement plus petit si tu veux */
+    margin-top: 15px; /* Espacement au-dessus */
+}
+
+/* Nouvelle Section Vidéo YouTube */
+#video-application-section {
+    background-color: var(--secondary-bg-color); /* Fond blanc pour la section */
+    padding: 60px 0;
+}
+
+#video-application-section h2 {
+    margin-bottom: 10px; /* Moins d'espace sous le titre de section */
+}
+
+#video-application-section p.text-center {
+    margin-bottom: 40px; /* Plus d'espace sous le sous-titre */
+}
+
+.youtube-video-container {
+    max-width: 800px; /* Largeur maximale pour le conteneur vidéo */
+    margin: 0 auto;
+    background-color: var(--secondary-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.youtube-video-container .video-player-thumbnail {
+    position: relative;
+    width: 100%;
+    /* Ratio 16:9 pour les vidéos YouTube */
+    padding-bottom: 56.25%; /* (9 / 16) * 100% */
+    background-color: black; /* Fond noir si l'image ne charge pas */
+}
+
+.youtube-video-container .youtube-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.youtube-video-container .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.youtube-video-container .play-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.youtube-video-container .play-icon-large {
+    color: white;
+    font-size: 5em; /* Icône de lecture très grande */
+    opacity: 0.9;
+    transition: transform 0.2s ease;
+}
+
+.youtube-video-container .play-overlay:hover .play-icon-large {
+    transform: scale(1.1);
+}
+
+.youtube-video-container .youtube-video-details {
+    padding: 20px;
+}
+
+.youtube-video-container .video-header-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.youtube-video-container .channel-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.youtube-video-container .channel-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.youtube-video-container .channel-name {
+    font-weight: bold;
+    color: var(--text-color-dark);
+}
+
+.youtube-video-container .subscribers {
+    font-size: 0.85em;
+    color: #888;
+}
+
+.youtube-video-container .subscribe-btn {
+    background-color: #CC0000; /* Rouge YouTube */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto; /* Pousse le bouton à droite */
+    transition: background-color 0.3s ease;
+}
+
+.youtube-video-container .subscribe-btn:hover {
+    background-color: #B20000;
+}
+
+.youtube-video-container h3 {
+    text-align: left; /* Titre de la vidéo aligné à gauche */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color-dark);
+}
+
+.youtube-video-container .video-description-container {
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+}
+
+.youtube-video-container .video-description-container .full-video-description {
+    display: none; /* Par default, masqué */
+}
+
+.youtube-video-container .video-description-container .read-more-btn {
+    color: #606060; /* Gris foncé pour le "plus" de YouTube */
+    font-weight: bold;
+}
+.youtube-video-container .video-description-container .read-more-btn:hover {
+    color: var(--accent-color);
+}
+
+.youtube-video-container .video-actions {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    color: #666;
+    font-size: 0.9em;
+}
+
+.youtube-video-container .video-actions span {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.youtube-video-container .video-actions span:hover {
+    color: var(--accent-color);
+}
+
+.youtube-video-container .video-actions i {
+    margin-right: 8px;
+    font-size: 1.1em;
+    color: #666;
+}
+.youtube-video-container .video-actions span:hover i {
+    color: var(--accent-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 2;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero h2 {
+        font-size: 1.4em;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 20px;
+        text-align: left !important;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 12px;
+        right: auto;
+    }
+
+    .skills-grid, .plus-grid, .portfolio-grid, .social-posts-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile pour toutes les grilles */
+    }
+
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        min-width: unset;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .portfolio-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        flex-grow: 1;
+        max-width: 150px;
+    }
+
+    /* Ajustements spécifiques pour les images des posts sociaux en mobile */
+    .social-post .post-image {
+        width: 100%;
+        margin: 0; /* Supprime les marges négatives en mobile */
+    }
+
+    /* Responsive pour la nouvelle section YouTube */
+    .youtube-video-container {
+        border-radius: 0; /* Pas de bords arrondis sur les petits écrans pour un look plus "fullscreen" */
+        box-shadow: none;
+    }
+    .youtube-video-container .video-player-thumbnail {
+        padding-bottom: 56.25%; /* Toujours 16:9 */
+    }
+    .youtube-video-container .play-icon-large {
+        font-size: 3.5em; /* Plus petit sur mobile */
+    }
+
+    /* Boutons de navigation mobile */
+    .section-navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-navigation .btn-primary {
+        width: 80%; /* Prend plus de place sur mobile */
+        margin: 10px 0; /* Marge verticale */
+    }
+}
+/* Style pour les titres de sous-catégories (Gestion de Contenu Digital, Analyse & Stratégie Digitale, Communication Directe & Gestion Web) */
+.timeline-item:first-child ul > li > strong { /* Cible les strong qui sont directement dans un li de premier niveau */
+    display: block; /* Force le strong à prendre toute la largeur pour le séparer du reste */
+    margin-bottom: 5px; /* Petit espace sous le titre de la catégorie */
+    color: #333; /* Ou une couleur qui correspond à ta charte */
+    font-size: 1.1em; /* Légèrement plus grand */
+}
+
+/* Style pour les points de liste détaillés (les sous-puces) */
+.timeline-item:first-child ul ul li { /* Cible les li des listes imbriquées */
+    margin-bottom: 8px; /* Espace entre chaque puce détaillée */
+    line-height: 1.4; /* Améliore la lisibilité du texte */
+}
+
+/* Styles pour le Carrousel dans le Portfolio */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Cache les images qui ne sont pas visibles */
+    border-radius: 8px; /* Correspond au style de tes portfolio-item */
+    margin-bottom: 15px; /* Espace sous le carrousel avant le bouton */
+    max-height: 300px; /* Limite la hauteur du carrousel */
+    display: flex; /* Permet un alignement facile des images */
+    align-items: center; /* Centre verticalement les images */
+    justify-content: center; /* Centre horizontalement les images */
+    background-color: #f0f0f0; /* Couleur de fond si l'image ne remplit pas tout */
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animation de la transition */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%; /* Chaque slide prend 100% de la largeur du conteneur slides */
+    box-sizing: border-box; /* Inclut padding et border dans la largeur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 100%; /* L'image remplit la largeur du slide */
+    height: auto; /* Garde les proportions */
+    display: block; /* Supprime l'espace sous l'image */
+    object-fit: contain; /* Redimensionne l'image pour qu'elle tienne dans son conteneur sans être coupée */
+    max-height: 300px; /* S'assure que les images ne dépassent pas la hauteur max du conteneur */
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 10; /* Pour que les flèches soient au-dessus des images */
+}
+
+.carousel-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Boutons ronds */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    display: flex; /* Pour centrer l'icône */
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Taille fixe pour les boutons ronds */
+    height: 40px; /* Taille fixe pour les boutons ronds */
+}
+
+.carousel-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Masquer les flèches si un seul visuel dans le carrousel */
+.carousel-container[data-single-slide="true"] .carousel-nav {
+    display: none;
+}
+/* --- NOUVEAUX STYLES POUR LA PAGE CONTACT --- */
+
+/* Section de Contact Générale */
+#contact {
+    background-color: #f8f8f8; /* Fond légèrement grisé pour contraster */
+    padding: 80px 0; /* Plus d'espace vertical */
+    text-align: center; /* Centre le texte principal */
+    position: relative; /* Pour positionner des éléments au-dessus si besoin */
+    overflow: hidden; /* Assure que rien ne dépasse */
+}
+
+#contact h2 {
+    font-size: 3em; /* Taille de titre plus grande */
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block; /* Pour appliquer un pseudo-élément dessous */
+    padding-bottom: 10px;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #F4A738; /* Couleur d'accentuation, à adapter à ton thème */
+    border-radius: 2px;
+}
+
+#contact .text-center {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 50px auto; /* Centre et espace par rapport à la grille */
+    line-height: 1.6;
+}
+
+/* Grille de Contact */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 3 colonnes flexibles */
+    gap: 40px; /* Plus d'espace entre les éléments */
+    max-width: 900px;
+    margin: 0 auto; /* Centre la grille */
+    padding: 0 20px; /* Petite marge sur les côtés sur mobile */
+}
+
+/* Éléments Individuels de Contact */
+.contact-item {
+    background-color: #ffffff; /* Fond blanc pour les blocs */
+    border-radius: 12px; /* Coins plus arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Ombre plus douce et plus prononcée */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Icône au-dessus du texte */
+    align-items: center; /* Centre le contenu */
+    justify-content: center; /* Centre verticalement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    min-height: 200px; /* Hauteur minimale pour l'uniformité */
+}
+
+.contact-item:hover {
+    transform: translateY(-8px); /* Légère élévation au survol */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12); /* Ombre plus forte au survol */
+}
+
+.contact-item i {
+    font-size: 3.5em; /* Icônes plus grandes */
+    color: #F4A738; /* Couleur d'accentuation pour les icônes */
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Animation de couleur au survol */
+}
+
+.contact-item:hover i {
+    color: #EB4A56; /* Couleur légèrement plus foncée au survol */
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px; /* Espace sous le titre */
+}
+
+.contact-item p strong {
+    display: block; /* Le titre (Téléphone:, Email:, etc.) sur sa propre ligne */
+    font-size: 1.2em;
+    margin-bottom: 8px; /* Espace entre le titre et la valeur */
+    color: #222;
+}
+
+.contact-item a {
+    color: #007bff; /* Couleur des liens, peut être ton bleu habituel */
+    text-decoration: none; /* Pas de soulignement par défaut */
+    font-weight: 600; /* Plus épais */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0056b3; /* Changement de couleur au survol */
+    text-decoration: underline; /* Souligné au survol */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2.5em;
+    }
+    #contact .text-center {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+        gap: 30px;
+    }
+    .contact-item {
+        padding: 25px;
+    }
+    .contact-item i {
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+    .contact-item p {
+        font-size: 1em;
+    }
+    .contact-item p strong {
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+}

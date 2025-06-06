@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - Mes Petits Plus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Candidature Réseaux Sociaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="plus" class="page-section bg-light">
+            <div class="container">
+                <h2>Mes Petits Plus</h2>
+                <p class="text-center">Découvrez ce qui me passionne et m'anime en dehors de mon parcours professionnel.</p>
+                <div class="plus-grid">
+
+                    <div class="plus-item">
+                        <i class="fas fa-rocket"></i> <h3>Projets Personnels & Développement</h3>
+                        <ul>
+                            <li>
+                                <br><strong>Conception graphique :</strong>
+                                <br>Réalisation de visuels et d'illustrations pour des projets personnels (ex: logos, affiches, posts sociaux).
+                            </li>
+                            <li>
+                                <br><strong>Production vidéo :</strong>
+                                <br>Création de montages vidéo dans le cadre personnel autour de passions ou d’activités.
+                            </li>
+                            <li>
+                                <br><strong>Développement d'applications :</strong>
+                                <br>Exploration des bases du développement d'applications mobiles/web, de la conception à la réalisation de prototypes.
+                            </li>
+                            <li>
+                                <br><strong>Veille proactive :</strong>
+                                <br>Maintien d'une veille constante sur les nouvelles tendances, outils et technologies du digital, particulièrement autour de toutes les fonctionnalités des IA.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plus-item">
+                        <i class="fas fa-map-marked-alt"></i> <h3>Engagement Local</h3>
+                        <ul>
+                            <li>
+                                <br><strong>Veille Locale :</strong>
+                                <br>Suivi de la plupart des manifestations et actualités autour de la région.
+                            </li>
+                            <li>
+                                <br><strong>Engagement Territorial :</strong>
+                                <br>Implication dans des activités locales (bénévolat, événements, associations, sports...) qui renforce mon attachement au territoire.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plus-item">
+                        <i class="fas fa-heart"></i> <h3>Mes Passions</h3>
+                        <ul>
+                            <li>
+                                <br><strong>Rugby (7 ans de pratique) :</strong>
+                                <br>Discipline, esprit d'équipe, gestion de la pression.
+                            </li>
+                            <li>
+                                <br><strong>Cuisine :</strong>
+                                <br>Créativité, précision, organisation.
+                            </li>
+                            <li>
+                                <br><strong>Aéronautique :</strong>
+                                <br>Rigueur, attention aux détails, curiosité.
+                            </li>
+                            <li>
+                                <br><strong>Bénévolat :</strong>
+                                <br>Engagement, sens des responsabilités, altruisme.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

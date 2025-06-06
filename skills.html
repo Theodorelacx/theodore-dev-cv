@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - Mes Compétences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Candidature Réseaux Sociaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="page-section bg-light">
+            <div class="container">
+                <h2>Mes Compétences</h2>
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-lightbulb"></i> Créativité</h3>
+                        <ul>
+                            <li>
+                                <br>Capacité à générer des idées nouvelles
+                                <br>Pour le contenu visuel et rédactionnel.
+                            </li>
+                            <li>
+                                <br>Aptitude à penser "hors des sentiers battus"
+                                <br>pour des campagnes innovantes.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-sync-alt"></i> Adaptabilité</h3>
+                        <ul>
+                            <li>
+                                <br>Capacité à évoluer dans un environnement
+                                <br>digital en constante mutation (veille).
+                            </li>
+                            <li>
+                                <br>Flexibilité face aux
+                                <br>nouvelles tendances et outils.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-forward"></i> Proactivité</h3>
+                        <ul>
+                            <li>
+                                <br>Anticipation des besoins et des opportunités
+                                <br>(Veille stratégique et opérationnelle).
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-question-circle"></i> Curiosité intellectuelle</h3>
+                        <ul>
+                            <li>
+                                <br>Capacité à chercher, explorer et vouloir comprendre de nouvelles informations, idées ou concepts. C'est l'envie naturelle d'apprendre.
+                             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-clipboard-check"></i> Rigueur & Organisation</h3>
+                        <ul>
+                            <li>
+                                <br>Gestion efficace de multiples tâches et projets simultanément.
+                            </li>
+                            <li>
+                                <br>Respect des délais et des plannings
+                                <br>(Programmation et suivi des actions).
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3><i class="fas fa-hand-sparkles"></i> Esprit d’initiative</h3>
+                        <ul>
+                            <li>
+                                <br>Proposition proactive de nouvelles idées ou améliorations.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

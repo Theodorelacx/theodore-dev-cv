@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - Mon Parcours Professionnel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Styles pour aligner à droite et espacer les points des missions actuelles */
+        .timeline-item:first-child ul ul li {
+            text-align: right; /* Aligne le texte des sous-puces à droite */
+            margin-bottom: 8px; /* Ajoute un espace après chaque sous-puce */
+            line-height: 1.4; /* Améliore la lisibilité */
+        }
+
+        /* Si tu veux aussi que le titre de la catégorie soit aligné à droite, ajoute ceci */
+        .timeline-item:first-child ul > li > strong {
+            display: block; /* Important pour que text-align: right fonctionne sur un inline-block */
+            text-align: right; /* Aligne le titre de la catégorie à droite */
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            color: #333; /* Ou une couleur qui correspond à ta charte */
+        }
+
+        /* Ajustement pour les marges des listes imbriquées si elles sont trop décalées */
+        .timeline-item:first-child ul ul {
+            margin-top: 5px; /* Petit espace au-dessus de la sous-liste */
+            padding-left: 0; /* Supprime le padding par défaut de la liste */
+            list-style-position: inside; /* Met la puce à l'intérieur du bloc */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Candidature Réseaux Sociaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="experience" class="page-section">
+            <div class="container">
+                <h2>Mon Parcours Professionnel</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Assistant communication et commercialisation</h3>
+                        <p class="company">Auvergne Thermale - La Route des Villes d'Eaux</p>
+                        <p class="date">Actuellement</p>
+                        <ul>
+                            <li>
+                                <strong>Gestion de Contenu Digital & Réseaux Sociaux :</strong>
+                                <ul>
+                                    <li>Création et diffusion de contenus graphiques et rédactionnels pour optimiser l'engagement sur les plateformes sociales (Facebook, Instagram, LinkedIn).</li>
+                                    <li>Co-programmation des publications notamment via un outil de planification (Swello) et suivi des calendriers éditoriaux.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Analyse & Stratégie Digitale :</strong>
+                                <ul>
+                                    <li>Reporting des performances des réseaux sociaux et analyse des KPIs pour ajuster les stratégies et améliorer la portée.</li>
+                                    <li>Réalisation d'une veille sectorielle et participation à la co-création de plans de communication digitaux.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Communication Directe & Gestion Web :</strong>
+                                <ul>
+                                    <li>Conception et envoi de newsletters engageantes pour renforcer la relation avec la communauté.</li>
+                                    <li>Mise à jour et gestion du contenu du site internet pour garantir une information cohérente et à jour.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Alternant Chargé de Communication & Développement</h3>
+                        <p class="company"> Auvergne Thermale</p>
+                        <p class="date">2022-2023</p>
+                        <ul>
+                            <li>Rédaction de plans de communication stratégiques.</li>
+                            <li>Mise en place et optimisation de campagnes digitales (web marketing, réseaux sociaux).</li>
+                            <li>Suivi de performance des campagnes (digitales et physiques) par la création et l'analyse de KPI.</li>
+                            <li>Gestion et création de supports de communication visuels.</li>
+                            <li>Conception, coordination et promotion d'événements, d'offres commerciales et de participations à des salons.</li>
+                            <li>Développement et gestion des relations presse.</li>
+                            <li>Coordination avec divers prestataires externes.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Stagiaire Marketing & Communication</h3>
+                        <p class="company">Auvergne thermale</p>
+                        <p class="date">Mars-Juillet 2022 & Avril-Juin 2019</p>
+                        <ul>
+                            <li>Mise en place de campagnes digitales, d'actions web marketing et d'actions digitales sur les réseaux sociaux.</li>
+                            <li>Démarchage (radios locales, personnalités, partenaires locaux...).</li>
+                            <li>Participation au développement d'une nouvelle marque.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

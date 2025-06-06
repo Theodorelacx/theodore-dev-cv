@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théodore Lacroix - CV - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="C.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="C.png" alt="Logo CV Théodore Lacroix">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="experience.html">Mon Parcours</a></li>
+                    <li><a href="skills.html">Mes Compétences</a></li>
+                    <li><a href="education.html">Ma Formation</a></li>
+                    <li><a href="plus.html">Mes Petits Plus</a></li>
+                    <li><a href="portfolio.html">Mon Portfolio</a></li>
+                    <li><a href="social-posts.html">Candidature Réseaux Sociaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="photo_theodore.png" alt="Photo de Théodore Lacroix" class="profile-photo">
+                    <h1>Théodore Lacroix</h1>
+                    <h2>Assistant Communication et Commercialisation à Auvergne Thermale et La Route des Villes d’Eaux</h2>
+                    <p>Moi, c’est Théodore, passionné par la communication créative et connectée au terrain.</p>
+                    <p>Diplômé d'un Master en marketing digital, j’ai développé un profil à la fois opérationnel et digital, que je mets aujourd’hui en pratique chez Auvergne Thermale et La Route des Villes d’Eaux en tant qu’Assistant Communication et Commercialisation.</p>
+                    <p>Curieux de nature et particulièrement attentif à l’actualité locale, je m’efforce de relayer et valoriser ce qui fait vivre un territoire, en créant des contenus.</p>
+                    <p>Mon objectif aujourd’hui : évoluer vers un poste de Community Manager pour continuer à faire vivre des marques et institutions sur les réseaux sociaux, avec cohérence et créativité.</p>
+                    
+                    <div class="contact-info-hero">
+                        <p><i class="fas fa-phone"></i> 06 03 16 21 30</p>
+                        <p><i class="fas fa-envelope"></i> theodore.lacx@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Clermont-Ferrand</p>
+                        <p><a href="https://www.linkedin.com/in/th%C3%A9odore-lacroix-090b23174/" target="_blank"><i class="fab fa-linkedin"></i> Mon profil LinkedIn</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Théodore Lacroix - CV en ligne. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript pour le menu mobile
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            // Fermer le menu si un lien est cliqué (sur mobile)
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
